@@ -373,6 +373,7 @@ set(QuantLib_SRC
     math/factorial.cpp
     math/incompletegamma.cpp
     math/integrals/discreteintegrals.cpp
+    math/integrals/exponentialintegrals.cpp
     math/integrals/filonintegral.cpp
     math/integrals/gaussianorthogonalpolynomial.cpp
     math/integrals/gaussianquadratures.cpp
@@ -683,6 +684,8 @@ set(QuantLib_SRC
     pricingengines/credit/integralcdsengine.cpp
     pricingengines/credit/isdacdsengine.cpp
     pricingengines/credit/midpointcdsengine.cpp
+    pricingengines/forward/mcforwardeuropeanbsengine.cpp
+    pricingengines/forward/mcforwardeuropeanhestonengine.cpp
     pricingengines/greeks.cpp
     pricingengines/inflation/inflationcapfloorengines.cpp
     pricingengines/lookback/analyticcontinuousfixedlookback.cpp
@@ -889,6 +892,7 @@ set(QuantLib_SRC
     time/daycounters/business252.cpp
     time/daycounters/simpledaycounter.cpp
     time/daycounters/thirty360.cpp
+    time/daycounters/thirty365.cpp
     time/ecb.cpp
     time/frequency.cpp
     time/imm.cpp
@@ -1438,6 +1442,7 @@ set(QuantLib_HDR
     math/initializers.hpp
     math/integrals/all.hpp
     math/integrals/discreteintegrals.hpp
+    math/integrals/exponentialintegrals.hpp
     math/integrals/filonintegral.hpp
     math/integrals/gaussianorthogonalpolynomial.hpp
     math/integrals/gaussianquadratures.hpp
@@ -1936,6 +1941,9 @@ set(QuantLib_HDR
     pricingengines/forward/all.hpp
     pricingengines/forward/forwardengine.hpp
     pricingengines/forward/forwardperformanceengine.hpp
+    pricingengines/forward/mcforwardeuropeanbsengine.hpp
+    pricingengines/forward/mcforwardeuropeanhestonengine.hpp
+    pricingengines/forward/mcforwardvanillaengine.hpp
     pricingengines/forward/mcvarianceswapengine.hpp
     pricingengines/forward/replicatingvarianceswapengine.hpp
     pricingengines/genericmodelengine.hpp
@@ -2173,6 +2181,7 @@ set(QuantLib_HDR
     termstructures/yield/piecewisezerospreadedtermstructure.hpp
     termstructures/yield/quantotermstructure.hpp
     termstructures/yield/ratehelpers.hpp
+    termstructures/yield/ultimateforwardtermstructure.hpp
     termstructures/yield/zerocurve.hpp
     termstructures/yield/zerospreadedtermstructure.hpp
     termstructures/yield/zeroyieldstructure.hpp
@@ -2230,6 +2239,7 @@ set(QuantLib_HDR
     time/dategenerationrule.hpp
     time/daycounter.hpp
     time/daycounters/actual360.hpp
+    time/daycounters/actual364.hpp
     time/daycounters/actual365fixed.hpp
     time/daycounters/actualactual.hpp
     time/daycounters/all.hpp
@@ -2237,6 +2247,7 @@ set(QuantLib_HDR
     time/daycounters/one.hpp
     time/daycounters/simpledaycounter.hpp
     time/daycounters/thirty360.hpp
+    time/daycounters/thirty365.hpp
     time/ecb.hpp
     time/frequency.hpp
     time/imm.hpp
@@ -2246,6 +2257,7 @@ set(QuantLib_HDR
     time/weekday.hpp
     timegrid.hpp
     timeseries.hpp
+    tuple.hpp
     types.hpp
     userconfig.hpp
     utilities/all.hpp
